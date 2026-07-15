@@ -20,21 +20,21 @@ class Knight:
         self.protection = protection
 
     @classmethod
-    def create_knight(cls, knightsData: dict) -> Knight:
+    def create_knight(cls, knights_data: dict) -> Knight:
         return Knight(
-            name=knightsData["name"],
-            power=knightsData["power"],
-            hp=knightsData["hp"],
-            armour=knightsData["armour"],
-            weapon=knightsData["weapon"],
-            potion=knightsData["potion"],
+            name=knights_data["name"],
+            power=knights_data["power"],
+            hp=knights_data["hp"],
+            armour=knights_data["armour"],
+            weapon=knights_data["weapon"],
+            potion=knights_data["potion"],
             protection=0
         )
 
     def apply_knight_stats(self: Knight) -> None:
         # apply armour
-        for a in self.armour:
-            self.protection += a["protection"]
+        for item in self.armour:
+            self.protection += item["protection"]
 
         # apply weapon
         self.power += self.weapon["power"]

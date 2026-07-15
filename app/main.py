@@ -89,12 +89,12 @@ KNIGHTS = {
 }
 
 
-def battle(knightsConfig: dict) -> dict:
+def battle(knights_config: dict) -> dict:
     # PREPARATIONS:
-    lancelot = Knight.create_knight(knightsConfig["lancelot"])
-    arthur = Knight.create_knight(knightsConfig["arthur"])
-    mordred = Knight.create_knight(knightsConfig["mordred"])
-    red_knight = Knight.create_knight(knightsConfig["red_knight"])
+    lancelot = Knight.create_knight(knights_config["lancelot"])
+    arthur = Knight.create_knight(knights_config["arthur"])
+    mordred = Knight.create_knight(knights_config["mordred"])
+    red_knight = Knight.create_knight(knights_config["red_knight"])
 
     lancelot.apply_knight_stats()
     arthur.apply_knight_stats()
