@@ -51,11 +51,8 @@ class Knight:
                 self.hp += self.potion["effect"]["hp"]
 
     def fight(self, opponent: Knight) -> None:
-        opponent_damage = max(0, opponent.power - self.protection)
-        self.hp -= opponent_damage
-
-        self_damage = max(0, self.power - opponent.protection)
-        opponent.hp -= self_damage
+        self.hp -= opponent.power - self.protection
+        opponent.hp -= self.power - opponent.protection
 
         # check if someone fell in battle
         self.hp = max(0, self.hp)
